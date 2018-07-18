@@ -4,62 +4,92 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fb49e8fedb13130075e585184b9619bb</list_id>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-18 03:52:50</sys_created_on>
-            <sys_id>7349e8fedb13130075e585184b9619bc</sys_id>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>e27459fedb93130075e585184b961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-18 03:52:50</sys_updated_on>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>active</element>
-            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fb49e8fedb13130075e585184b9619bb</list_id>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-18 03:52:50</sys_created_on>
-            <sys_id>f349e8fedb13130075e585184b9619bc</sys_id>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>667459fedb93130075e585184b961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-18 03:52:50</sys_updated_on>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>country</element>
-            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fb49e8fedb13130075e585184b9619bb</list_id>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-18 03:52:50</sys_created_on>
-            <sys_id>7749e8fedb13130075e585184b9619bc</sys_id>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>e67459fedb93130075e585184b961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-18 03:52:50</sys_updated_on>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>default_currency</element>
-            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fb49e8fedb13130075e585184b9619bb</list_id>
+            <element>default_currency.symbol</element>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-18 03:52:50</sys_created_on>
-            <sys_id>f749e8fedb13130075e585184b9619bc</sys_id>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>6a7459fedb93130075e585184b961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-18 03:52:50</sys_updated_on>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default_currency.code</element>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>ea7459fedb93130075e585184b961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>default_currency</element>
+            <list_id display_value="x_245925_dxc_docs_local_business_units" element="NULL" name="x_245925_dxc_docs_local_business_units" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6e7459fedb93130075e585184b961985</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
+            <sys_id>6e7459fedb93130075e585184b961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -73,10 +103,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-18 03:52:50</sys_created_on>
+            <sys_created_on>2018-07-18 07:01:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>fb49e8fedb13130075e585184b9619bb</sys_id>
+            <sys_id>6e7459fedb93130075e585184b961985</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_245925_dxc_docs_local_business_units</sys_name>
             <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
@@ -84,7 +114,7 @@
             <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
             <sys_update_name>sys_ui_list_x_245925_dxc_docs_local_business_units_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-18 03:52:50</sys_updated_on>
+            <sys_updated_on>2018-07-18 07:01:26</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
