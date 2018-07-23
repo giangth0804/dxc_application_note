@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_245925_dxc_docs.DXC_ApprovalRequest_GBP_parseJSON</api_name>
+        <client_callable>true</client_callable>
+        <description>parse JSON </description>
+        <name>DXC_ApprovalRequest_GBP_parseJSON</name>
+        <script><![CDATA[var DXC_ApprovalRequest_GBP_parseJSON = Class.create();
+DXC_ApprovalRequest_GBP_parseJSON.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getDXC_ApprovalRequest_GBP_parseJSON: function (){
+		try {
+			var currencyPair = this.getParameter('sysparm_new_local_currency') + "_GBP";
+			var r = new sn_ws.RESTMessageV2('x_245925_dxc_docs.Currency_API', 'Default GET');
+			
+			//auto generate variable
+			r.setStringParameterNoEscape('money', currencyPair);
+			
+			//override authentication profile
+			//authentication type ='basic'/ 'oauth2'
+			//r.setAuthentication(authentication type, profile name);
+			
+			//set a MID server name if one wants to run the message on MID
+			//r.setMIDServer('MY_MID_SERVER');
+			
+			//if the message is configured to communicate through ECC queue, either
+			//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+			//to true. Otherwise, one may get an intermittent error that the response body is null
+			//r.setEccParameter('skip_sensor', true);
+			
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			//parse string to a JSON object
+			var jsonObject = JSON.parse(responseBody);
+			var result = '' + jsonObject[currencyPair]['val'];
+			return result;
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+		}
+	},
+	
+	type: 'DXC_ApprovalRequest_GBP_parseJSON'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-19 09:45:56</sys_created_on>
+        <sys_id>ab38ae0fdb93130075e585184b96194f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>DXC_ApprovalRequest_GBP_parseJSON</sys_name>
+        <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
+        <sys_update_name>sys_script_include_ab38ae0fdb93130075e585184b96194f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-20 08:47:05</sys_updated_on>
+    </sys_script_include>
+</record_update>

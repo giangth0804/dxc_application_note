@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_245925_dxc_docs_approval_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_245925_dxc_docs_approval_request">lbuISEMPTY^EQ<item endquery="false" field="lbu" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>DXC_ApprovalRequest_showCurrentUser</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	//get location of current user who try to submit the form
+	var userCountry = current.submitted_by.location.country;
+	
+	//get country name record from 'LBU' table
+	var grLbu = new GlideRecord('x_245925_dxc_docs_local_business_units');
+	grLbu.get('country.name', userCountry);
+	//set value for 'lbu' field in 'Approval Request' table from sys_id
+	current.lbu = grLbu.sys_id;
+	//set value for 'local currency' field in 'Approval Request' table
+	//from 'defaut_currency' field
+	current.local_currency = current.lbu.default_currency;
+	
+	//set value for 'exchange rate' from 'rate' field in fx_rate table 
+	var grRate = new GlideRecord('fx_rate');	
+	grRate.addQuery('currency', current.local_currency);
+	grRate.orderByDesc('sys_updated_on');
+	grRate.query();
+	grRate.next();
+	current.exchange_rate = grRate.rate;
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-18 08:55:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>efffddb6dbd3130075e585184b961960</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>DXC_ApprovalRequest_showCurrentUser</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
+        <sys_update_name>sys_script_efffddb6dbd3130075e585184b961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-20 04:23:25</sys_updated_on>
+        <template/>
+        <when>before_display</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=efffddb6dbd3130075e585184b961960"/>
+</record_update>
