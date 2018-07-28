@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_action_view">
+    <sys_ui_action_view action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-25 08:48:51</sys_created_on>
+        <sys_id>dc30b1c1db6f130075e585184b9619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Save.DXCView</sys_name>
+        <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
+        <sys_ui_action display_value="Save">e09e0c89dbab130075e585184b96190e</sys_ui_action>
+        <sys_ui_view display_value="DXCView" name="dxcview">abe69172dbd3130075e585184b9619f7</sys_ui_view>
+        <sys_update_name>sys_ui_action_view_dc30b1c1db6f130075e585184b9619f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-25 08:48:51</sys_updated_on>
+        <visibility>include</visibility>
+    </sys_ui_action_view>
+</record_update>
