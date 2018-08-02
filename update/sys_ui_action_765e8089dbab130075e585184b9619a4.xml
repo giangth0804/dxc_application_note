@@ -4,8 +4,13 @@
         <action_name>ar_approve</action_name>
         <active>true</active>
         <client>false</client>
-        <comments/>
-        <condition/>
+        <comments>Show when 'state' = 'waiting for leader' and current user has role 'DXC Leader'&#13;
+Or &#13;
+Show when 'state' = 'waiting for PM' and current user has role 'DXC PM'&#13;
+&#13;
+Leader or PM approve for this request&#13;
+</comments>
+        <condition>(current.state == 'WaitingLeader' &amp;&amp; gs.hasRole('x_245925_dxc_docs.DXC Leader')) || (current.state == 'WaitingPMApprover' &amp;&amp; gs.hasRole('x_245925_dxc_docs.DXC PM'))</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -23,8 +28,25 @@
         <name>Approve</name>
         <onclick/>
         <order>200</order>
-        <script/>
-        <show_insert>true</show_insert>
+        <script><![CDATA[//excuted if state = waiting for pm
+if(current.state == 'WaitingPMApprover'){
+	current.state = 'Approved';
+}
+
+//excuted if state = waiting for leader
+if(current.state == 'WaitingLeader'){
+	//set state = 'Approval' if level of approval is leader
+	if(current.level_of_approval == 'Leader'){
+		current.state = 'Approved';
+	}else
+	//set state = 'Waiting for PM' if level of approval is leader
+	if(current.level_of_approval == 'LeaderPM'){
+		current.state = 'WaitingPMApprover';
+	}
+}
+
+current.update();]]></script>
+        <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
@@ -34,7 +56,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>765e8089dbab130075e585184b9619a4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
@@ -42,7 +64,7 @@
         <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
         <sys_update_name>sys_ui_action_765e8089dbab130075e585184b9619a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-25 01:42:42</sys_updated_on>
+        <sys_updated_on>2018-08-02 14:02:18</sys_updated_on>
         <table>x_245925_dxc_docs_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

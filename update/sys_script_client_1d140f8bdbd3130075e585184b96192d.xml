@@ -11,19 +11,20 @@
         <name>DXC_ApprovalRequest_LCurrency_onC</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue ==='') {
+		return;
+	}
 	
 	//user GlideAjax to get XML from server
 	var aj = new GlideAjax('DXC_ApprovalRequest_GBP_parseJSON');
-	aj.addParam('sysparm_name', 'getDXC_ApprovalRequest_GBP_parseJSON');
+	aj.addParam('sysparm_name', 'getRate');
 	aj.addParam('sysparm_new_local_currency', g_form.getDisplayBox('local_currency').value);//get display value of local_currency field
 	aj.getXML(getResponse);
 	
-	function getResponse(response){
-		var info = response.responseXML.documentElement.getAttribute("answer");
-		g_form.setValue('gbp',info);
-	}
-	
-	
+}
+function getResponse(response){
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.setValue('gbp',answer);
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -31,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1d140f8bdbd3130075e585184b96192d</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>DXC_ApprovalRequest_LCurrency_onC</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
@@ -39,7 +40,7 @@
         <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
         <sys_update_name>sys_script_client_1d140f8bdbd3130075e585184b96192d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-24 15:21:30</sys_updated_on>
+        <sys_updated_on>2018-08-02 13:41:08</sys_updated_on>
         <table>x_245925_dxc_docs_approval_request</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
