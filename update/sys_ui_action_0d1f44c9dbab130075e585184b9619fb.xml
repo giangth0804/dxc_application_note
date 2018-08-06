@@ -6,7 +6,7 @@
         <client>false</client>
         <comments>Show on the form when value of 'state' field is 'WaitingLeader' and 'Reviewing' value is 'False'&#13;
 Change status of 'state' field to 'Cancelled' after cancel.</comments>
-        <condition>current.state == 'WaitingLeader' &amp;&amp; current.reviewing == false &amp;&amp;  gs.hasRole('x_245925_dxc_docs.DXC Employee')</condition>
+        <condition>current.state == 'WaitingLeader' &amp;&amp; current.reviewing == false &amp;&amp; current.canCreate() &amp;&amp; current.submitted_by ==gs.getUserID()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -28,7 +28,9 @@ Change status of 'state' field to 'Cancelled' after cancel.</comments>
 current.state = 'Draft';
 
 current.update();
-action.setRedirectURL(current);]]></script>
+action.setRedirectURL(current);
+
+// gs.hasRole('x_245925_dxc_docs.DXC Employee')]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -39,7 +41,7 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d1f44c9dbab130075e585184b9619fb</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Recall</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
@@ -47,7 +49,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
         <sys_update_name>sys_ui_action_0d1f44c9dbab130075e585184b9619fb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-02 14:05:13</sys_updated_on>
+        <sys_updated_on>2018-08-05 10:10:26</sys_updated_on>
         <table>x_245925_dxc_docs_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

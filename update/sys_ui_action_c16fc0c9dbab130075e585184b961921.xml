@@ -27,7 +27,8 @@ Leader or PM decline for this request</comments>
         <name>Decline</name>
         <onclick/>
         <order>700</order>
-        <script><![CDATA[current.state = 'Declined';
+        <script><![CDATA[//change state to Declined
+current.state = 'Declined';
 
 current.update();]]></script>
         <show_insert>false</show_insert>
@@ -40,7 +41,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c16fc0c9dbab130075e585184b961921</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Decline</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245925_dxc_docs">90c42741db1b53005b1f9b81ca9619f9</sys_package>
@@ -48,7 +49,7 @@ current.update();]]></script>
         <sys_scope display_value="DXC Approval Note">90c42741db1b53005b1f9b81ca9619f9</sys_scope>
         <sys_update_name>sys_ui_action_c16fc0c9dbab130075e585184b961921</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-02 14:04:27</sys_updated_on>
+        <sys_updated_on>2018-08-03 15:24:31</sys_updated_on>
         <table>x_245925_dxc_docs_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
